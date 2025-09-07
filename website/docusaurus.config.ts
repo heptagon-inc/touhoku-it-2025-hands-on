@@ -15,14 +15,14 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://heptagon-inc/miura-bd.github.io',
+  url: 'https://heptagon-inc.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/touhoku-it-2025-hands-on/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'heptagon-inc/miura-bd', // Usually your GitHub org/user name.
+  organizationName: 'heptagon-inc', // Usually your GitHub org/user name.
   projectName: 'touhoku-it-2025-hands-on', // Usually your repo name.
 
   onBrokenLinks: 'throw',

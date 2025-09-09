@@ -188,7 +188,7 @@ S3イベント設定が完了しました。これで画像をアップロード
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 3 - Lambda関数作成**](./03-lambda) | [**次へ: Step 5 - CloudFront設定 →**](./05-cloudfront)
+[**← 前へ: Step 3 - Lambda関数作成**](./lambda) | [**次へ: Step 5 - CloudFront設定 →**](./cloudfront)
 
 </div>
 

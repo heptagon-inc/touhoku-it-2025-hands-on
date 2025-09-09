@@ -280,7 +280,7 @@ CloudFrontの設定が完了しました。これで世界中どこからでも�
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 4 - S3イベント設定**](./04-s3-event) | [**次へ: Step 6 - システムテスト →**](./06-test)
+[**← 前へ: Step 4 - S3イベント設定**](./s3-event) | [**次へ: Step 6 - システムテスト →**](./test)
 
 </div>
 

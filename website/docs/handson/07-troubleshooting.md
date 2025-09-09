@@ -343,6 +343,6 @@ The request signature we calculated does not match
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 6 - システムテスト**](./06-test) | [**次へ: Step 8 - 後片付け →**](./08-cleanup)
+[**← 前へ: Step 6 - システムテスト**](./test) | [**次へ: Step 8 - 後片付け →**](./cleanup)
 
 </div>

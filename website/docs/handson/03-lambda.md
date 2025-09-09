@@ -310,7 +310,7 @@ Lambda関数の作成が完了しました。次のステップでS3からのト
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 2 - DynamoDB作成**](./02-dynamodb) | [**次へ: Step 4 - S3イベント設定 →**](./04-s3-event)
+[**← 前へ: Step 2 - DynamoDB作成**](./dynamodb) | [**次へ: Step 4 - S3イベント設定 →**](./s3-event)
 
 </div>
 

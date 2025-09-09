@@ -98,6 +98,12 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 
 1. DynamoDBダッシュボードで **「テーブルの作成」** ボタンをクリック
 
+![DynamoDBテーブル作成ボタン](/img/handson/placeholder-create-button.svg)
+
+:::tip 💡 画像について
+この画像は現在プレースホルダーです。実際のAWSコンソール画面に後日置き換え予定です。
+:::
+
 ### Step 2-3: テーブルの設定
 
 #### 📝 基本設定

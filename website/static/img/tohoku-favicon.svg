@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4299e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#63b3ed;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="riceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d69e2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f6e05e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景（空） -->
+  <rect width="64" height="64" fill="url(#skyGradient)" rx="8"/>
+  
+  <!-- 岩手山のシルエット -->
+  <path d="M0 45 Q15 30 25 35 Q35 25 45 30 Q55 20 64 25 V64 H0 Z" fill="url(#mountainGradient)"/>
+  
+  <!-- 雪化粧 -->
+  <path d="M20 35 Q30 28 40 32 Q50 25 60 28 Q55 30 45 35 Q35 32 25 38 Z" fill="#f8f9fa" opacity="0.8"/>
+  
+  <!-- IT文字（シンプルなピクセル風） -->
+  <rect x="20" y="15" width="3" height="12" fill="#ffffff" opacity="0.9"/>
+  <rect x="25" y="15" width="8" height="3" fill="#ffffff" opacity="0.9"/>
+  <rect x="29" y="18" width="3" height="9" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- 稲穂のアクセント -->
+  <circle cx="12" cy="50" r="2" fill="url(#riceGradient)"/>
+  <circle cx="16" cy="48" r="1.5" fill="url(#riceGradient)"/>
+  <circle cx="48" cy="52" r="2" fill="url(#riceGradient)"/>
+  <circle cx="52" cy="50" r="1.5" fill="url(#riceGradient)"/>
+</svg>

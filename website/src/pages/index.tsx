@@ -20,8 +20,14 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/handson/">
+            🚀 ハンズオンを始める
+          </Link>
+          <Link
+            className="button button--outline button--lg"
+            to="https://tohoku-it-bussanten.com/"
+            style={{marginLeft: '1rem'}}>
+            📍 東北IT物産展について
           </Link>
         </div>
       </div>
@@ -33,8 +39,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="東北IT物産展2025で開催されるAWS画像処理ハンズオンの公式サイト。2時間でサーバーレス画像処理システムを構築します。">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

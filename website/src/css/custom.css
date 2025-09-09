@@ -42,17 +42,15 @@
   --docusaurus-highlighted-code-line-bg: rgba(104, 211, 145, 0.2);
 }
 
-/* 東北らしいカスタムスタイリング */
+/* 東北らしいカスタムスタイリング - アクセシビリティ重視 */
 .hero__title {
-  background: linear-gradient(135deg, var(--tohoku-forest), var(--tohoku-mountain));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1a365d; /* 濃いブルーグレー - 十分なコントラスト比 */
   font-weight: 700;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
 }
 
 .hero__subtitle {
-  color: var(--tohoku-mountain);
+  color: #2d3748; /* 濃いグレー - ライトモードで読みやすい */
   font-weight: 500;
 }
 
@@ -89,4 +87,24 @@
   position: absolute;
   left: -1.5rem;
   opacity: 0.6;
+}
+
+/* ダークモード専用スタイリング */
+[data-theme='dark'] .hero__title {
+  color: #90cdf4; /* 明るいブルー - ダークモードで読みやすい */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: #cbd5e0; /* ライトグレー - ダークモードで読みやすい */
+}
+
+[data-theme='dark'] .navbar {
+  background: linear-gradient(90deg, #2d3748 0%, rgba(104, 211, 145, 0.1) 100%);
+  border-bottom: 2px solid #68d391;
+}
+
+[data-theme='dark'] .footer {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: #f7fafc;
 }

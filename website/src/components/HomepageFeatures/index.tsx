@@ -11,32 +11,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: '🚀 実践的なサーバーレス構築',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        S3、Lambda、DynamoDB、CloudFrontを組み合わせた
+        <strong>本格的な画像処理システム</strong>を2時間で構築。
+        実際に本番環境で使える技術を習得できます。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: '🎯 初心者から上級者まで対応',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        基本的なAWS操作から、WebP変換などの<strong>最新技術</strong>まで段階的に学習。
+        東北の地域コミュニティで共に成長する学習体験を提供します。
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: '🏔️ 東北IT物産展2025',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        地域の技術者同士が集まる<strong>東北IT物産展</strong>で開催。
+        ハンズオン後は参加者同士で交流し、東北のIT技術コミュニティを育てていきましょう。
       </>
     ),
   },

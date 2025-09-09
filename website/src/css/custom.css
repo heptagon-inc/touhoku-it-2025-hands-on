@@ -1,110 +1,30 @@
 /**
- * 東北IT物産展2025 - カスタムデザインテーマ
- * 東北の自然と文化をイメージしたカラーパレット
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
  */
 
-/* 東北テーマカラー - 雪山と稲穂をイメージ */
+/* You can override the default Infima variables here. */
 :root {
-  /* 主要カラー: 岩手山の青みがかった深緑 */
-  --ifm-color-primary: #2d5016;
-  --ifm-color-primary-dark: #264714;
-  --ifm-color-primary-darker: #234312;
-  --ifm-color-primary-darkest: #1d380e;
-  --ifm-color-primary-light: #345918;
-  --ifm-color-primary-lighter: #375d19;
-  --ifm-color-primary-lightest: #3e681d;
-  
-  /* 東北らしいアクセントカラー */
-  --tohoku-snow: #f8f9fa;
-  --tohoku-mountain: #4a5568;
-  --tohoku-rice: #d69e2e;
-  --tohoku-forest: #2d5016;
-  --tohoku-sky: #4299e1;
-  --tohoku-earth: #8b4513;
-  
-  /* ヒーローセクションのグラデーション */
-  --ifm-hero-background-color: linear-gradient(135deg, #2d5016 0%, #4a5568 100%);
-  --ifm-background-color: var(--tohoku-snow);
-  
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(45, 80, 22, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* ダークモード: 雪夜をイメージした落ち着いた色調 */
+/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #68d391;
-  --ifm-color-primary-dark: #56c97d;
-  --ifm-color-primary-darker: #4bc26f;
-  --ifm-color-primary-darkest: #2ea043;
-  --ifm-color-primary-light: #7bdfa5;
-  --ifm-color-primary-lighter: #86e2b0;
-  --ifm-color-primary-lightest: #a0ebc4;
-  --docusaurus-highlighted-code-line-bg: rgba(104, 211, 145, 0.2);
-}
-
-/* 東北らしいカスタムスタイリング - アクセシビリティ重視 */
-.hero__title {
-  color: #1a365d; /* 濃いブルーグレー - 十分なコントラスト比 */
-  font-weight: 700;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-}
-
-.hero__subtitle {
-  color: #2d3748; /* 濃いグレー - ライトモードで読みやすい */
-  font-weight: 500;
-}
-
-/* ナビゲーションバーに東北らしいアクセント */
-.navbar {
-  background: linear-gradient(90deg, var(--tohoku-snow) 0%, rgba(45, 80, 22, 0.05) 100%);
-  border-bottom: 2px solid var(--tohoku-rice);
-}
-
-/* フッターに東北の大地をイメージした色合い */
-.footer {
-  background: linear-gradient(135deg, var(--tohoku-mountain) 0%, var(--tohoku-earth) 100%);
-  color: var(--tohoku-snow);
-}
-
-/* カードやコンテンツエリアの強化 */
-.card {
-  border: 1px solid var(--tohoku-rice);
-  box-shadow: 0 4px 8px rgba(45, 80, 22, 0.1);
-}
-
-/* コードブロックに東北らしい背景 */
-.prism-code {
-  background: linear-gradient(135deg, #f8f9fa 0%, rgba(45, 80, 22, 0.02) 100%) !important;
-}
-
-/* 東北文化を表現するアクセント要素 */
-.tohoku-accent {
-  position: relative;
-}
-
-.tohoku-accent::before {
-  content: "🏔️";
-  position: absolute;
-  left: -1.5rem;
-  opacity: 0.6;
-}
-
-/* ダークモード専用スタイリング */
-[data-theme='dark'] .hero__title {
-  color: #90cdf4; /* 明るいブルー - ダークモードで読みやすい */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-[data-theme='dark'] .hero__subtitle {
-  color: #cbd5e0; /* ライトグレー - ダークモードで読みやすい */
-}
-
-[data-theme='dark'] .navbar {
-  background: linear-gradient(90deg, #2d3748 0%, rgba(104, 211, 145, 0.1) 100%);
-  border-bottom: 2px solid #68d391;
-}
-
-[data-theme='dark'] .footer {
-  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-  color: #f7fafc;
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

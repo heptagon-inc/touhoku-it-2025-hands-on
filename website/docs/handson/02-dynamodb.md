@@ -229,7 +229,7 @@ DynamoDBテーブルの作成が完了しました。このテーブルに、Lam
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 1 - S3バケット作成**](./01-s3-bucket) | [**次へ: Step 3 - Lambda関数作成 →**](./03-lambda)
+[**← 前へ: Step 1 - S3バケット作成**](./s3-bucket) | [**次へ: Step 3 - Lambda関数作成 →**](./lambda)
 
 </div>
 

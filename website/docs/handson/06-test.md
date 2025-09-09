@@ -303,7 +303,7 @@ AWS画像処理システムが完璧に動作しています！
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 5 - CloudFront設定**](./05-cloudfront) | [**次へ: Step 7 - トラブルシューティング →**](./07-troubleshooting)
+[**← 前へ: Step 5 - CloudFront設定**](./cloudfront) | [**次へ: Step 7 - トラブルシューティング →**](./troubleshooting)
 
 </div>
 

@@ -27,12 +27,61 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 - **高可用性**: 3つのAZに自動レプリケーション
 :::
 
-今回は以下の画像メタデータを保存します：
-- 画像ID（一意の識別子）
-- アップロード日時
-- ファイルサイズ
-- オリジナル画像のURL
-- サムネイルのURL（3サイズ）
+### 🏗️ 保存するデータ構造の設計
+
+今回のDynamoDBテーブルでは以下の構造でメタデータを保存します：
+
+```json
+{
+  "image_id": "uuid-generated-id",           // パーティションキー
+  "upload_time": "2025-01-15T10:30:45.123Z", // GSI用
+  "original_image": {
+    "key": "photos/landscape.jpg",
+    "width": 1920,
+    "height": 1080, 
+    "file_size": 234567,
+    "format": "JPEG"
+  },
+  "processed_images": [
+    {
+      "key": "thumbnails/small/landscape_thumb.jpg",
+      "size": "small",
+      "width": 150,
+      "height": 84,
+      "file_size": 8192,
+      "format": "JPEG"
+    },
+    {
+      "key": "thumbnails/medium/landscape_thumb.jpg", 
+      "size": "medium",
+      "width": 300,
+      "height": 168,
+      "file_size": 18432,
+      "format": "JPEG"
+    },
+    {
+      "key": "thumbnails/large/landscape_thumb.jpg",
+      "size": "large", 
+      "width": 600,
+      "height": 337,
+      "file_size": 45123,
+      "format": "JPEG"
+    }
+  ]
+}
+```
+
+### 🔑 キー設計の技術的理由
+
+#### パーティションキー: `image_id`
+- **目的**: 各画像レコードの一意識別
+- **データ型**: String（UUIDv4形式）
+- **検索**: 特定画像の情報を高速取得
+
+#### GSI: `upload_time-index` 
+- **目的**: 時系列での画像検索
+- **用途**: 最新画像の表示、日付範囲検索
+- **Query効率**: アップロード順での効率的な検索
 
 ---
 
@@ -48,6 +97,12 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 ### Step 2-2: テーブル作成を開始
 
 1. DynamoDBダッシュボードで **「テーブルの作成」** ボタンをクリック
+
+![DynamoDBテーブル作成ボタン](/img/handson/placeholder-create-button.svg)
+
+:::tip 💡 画像について
+この画像は現在プレースホルダーです。実際のAWSコンソール画面に後日置き換え予定です。
+:::
 
 ### Step 2-3: テーブルの設定
 

@@ -1,0 +1,37 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#232F3E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Header bar -->
+  <rect width="800" height="60" fill="url(#grad1)"/>
+  
+  <!-- AWS logo placeholder -->
+  <rect x="20" y="15" width="80" height="30" fill="white" rx="4"/>
+  <text x="35" y="35" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FF9900">AWS</text>
+  
+  <!-- Navigation placeholder -->
+  <rect x="120" y="20" width="600" height="20" fill="#ffffff" rx="10" opacity="0.3"/>
+  
+  <!-- Main content area -->
+  <rect x="40" y="100" width="720" height="250" fill="white" stroke="#ddd" stroke-width="2" rx="8"/>
+  
+  <!-- Content placeholder -->
+  <rect x="60" y="120" width="200" height="20" fill="#e9ecef" rx="4"/>
+  <rect x="60" y="160" width="680" height="15" fill="#f8f9fa" rx="2"/>
+  <rect x="60" y="185" width="680" height="15" fill="#f8f9fa" rx="2"/>
+  <rect x="60" y="210" width="500" height="15" fill="#f8f9fa" rx="2"/>
+  
+  <!-- Button placeholder -->
+  <rect x="60" y="250" width="120" height="35" fill="#FF9900" rx="6"/>
+  <text x="120" y="272" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">重要ボタン</text>
+  
+  <!-- Placeholder text -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="12" fill="#6c757d" text-anchor="middle">AWSコンソール画面のプレースホルダー</text>
+</svg>

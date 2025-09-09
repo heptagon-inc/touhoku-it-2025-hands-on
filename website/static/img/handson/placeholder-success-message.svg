@@ -1,0 +1,20 @@
+<svg width="700" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="700" height="200" fill="#d4edda" stroke="#c3e6cb" stroke-width="1" rx="8"/>
+  
+  <!-- Success icon -->
+  <circle cx="50" cy="100" r="20" fill="#28a745"/>
+  <path d="M42 100 L48 106 L58 94" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Success message -->
+  <text x="90" y="95" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#155724">作成が完了しました！</text>
+  <text x="90" y="115" font-family="Arial, sans-serif" font-size="14" fill="#155724">リソースが正常に作成されました。次のステップに進んでください。</text>
+  
+  <!-- Resource details box -->
+  <rect x="90" y="130" width="500" height="40" fill="#ffffff" stroke="#c3e6cb" stroke-width="1" rx="4"/>
+  <text x="100" y="148" font-family="Arial, sans-serif" font-size="12" fill="#495057">作成されたリソース: your-username-resource-name</text>
+  <text x="100" y="162" font-family="Arial, sans-serif" font-size="12" fill="#495057">ステータス: アクティブ</text>
+  
+  <!-- Continue instruction -->
+  <text x="600" y="185" font-family="Arial, sans-serif" font-size="12" fill="#28a745" text-anchor="end">✓ 完了確認済み</text>
+</svg>

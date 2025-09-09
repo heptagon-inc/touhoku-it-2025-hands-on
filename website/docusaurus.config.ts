@@ -90,6 +90,12 @@ const config: Config = {
           position: 'left',
           label: 'Tutorial',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'handsonSidebar',
+          position: 'left',
+          label: 'AWS画像処理ハンズオン',
+        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/facebook/docusaurus',

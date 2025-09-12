@@ -22,7 +22,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
-      id: 'handson/00-preparation',
+      id: 'handson/preparation',
       label: 'Step 0: 事前準備・環境確認',
     },
     {
@@ -32,37 +32,37 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'handson/01-s3-bucket',
+          id: 'handson/s3-bucket',
           label: 'Step 1: S3バケット作成',
         },
         {
           type: 'doc',
-          id: 'handson/02-dynamodb',
-          label: 'Step 2: DynamoDB設定',
+          id: 'handson/dynamodb',
+          label: 'Step 2: DynamoDB作成',
         },
         {
           type: 'doc',
-          id: 'handson/03-lambda',
+          id: 'handson/lambda',
           label: 'Step 3: IAMロール作成',
         },
         {
           type: 'doc',
-          id: 'handson/04-lambda-function',
+          id: 'handson/lambda-function',
           label: 'Step 4: Lambda関数作成',
         },
         {
           type: 'doc',
-          id: 'handson/05-s3-event',
+          id: 'handson/s3-event',
           label: 'Step 5: S3イベント設定',
         },
         {
           type: 'doc',
-          id: 'handson/06-cloudfront',
+          id: 'handson/cloudfront',
           label: 'Step 6: CloudFront設定',
         },
         {
           type: 'doc',
-          id: 'handson/07-test',
+          id: 'handson/test',
           label: 'Step 7: システムテスト',
         },
       ],
@@ -74,12 +74,12 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'handson/08-troubleshooting',
+          id: 'handson/troubleshooting',
           label: 'Step 8: トラブルシューティング',
         },
         {
           type: 'doc',
-          id: 'handson/09-cleanup',
+          id: 'handson/cleanup',
           label: 'Step 9: 後片付け',
         },
       ],

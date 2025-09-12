@@ -290,7 +290,7 @@ IAMロールの作成が完了しました。これで、Lambda関数が安全�
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 2 - DynamoDB作成**](./02-dynamodb) | [**次へ: Step 4 - Lambda関数作成 →**](./04-lambda-function)
+[**← 前へ: Step 2 - DynamoDB作成**](./dynamodb) | [**次へ: Step 4 - Lambda関数作成 →**](./lambda-function)
 
 </div>
 

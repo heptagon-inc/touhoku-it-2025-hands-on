@@ -296,6 +296,6 @@ AWS画像処理ハンズオンを完走しました！
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 8 - トラブルシューティング**](./08-troubleshooting) | [**📋 ハンズオン概要に戻る**](./)
+[**← 前へ: Step 8 - トラブルシューティング**](./troubleshooting) | [**📋 ハンズオン概要に戻る**](./)
 
 </div>

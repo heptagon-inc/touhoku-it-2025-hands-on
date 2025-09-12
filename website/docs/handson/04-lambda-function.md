@@ -346,7 +346,7 @@ Lambda関数の作成が完了しました。次のステップでS3からのト
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 3 - IAMロール作成**](./03-lambda) | [**次へ: Step 5 - S3イベント設定 →**](./05-s3-event)
+[**← 前へ: Step 3 - IAMロール作成**](./lambda) | [**次へ: Step 5 - S3イベント設定 →**](./s3-event)
 
 </div>
 

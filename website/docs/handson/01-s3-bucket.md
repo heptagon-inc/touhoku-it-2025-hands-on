@@ -197,7 +197,7 @@ S3バケットの作成が完了しました。このバケットに画像をア
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 0 - 事前準備**](./preparation) | [**次へ: Step 2 - DynamoDB作成 →**](./dynamodb)
+[**← 前へ: Step 0 - 事前準備**](./00-preparation) | [**次へ: Step 2 - DynamoDB作成 →**](./02-dynamodb)
 
 </div>
 

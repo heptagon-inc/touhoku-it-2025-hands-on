@@ -174,7 +174,7 @@ graph LR
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: ハンズオン概要**](./) | [**次へ: Step 1 - S3バケット作成 →**](./s3-bucket)
+[**← 前へ: ハンズオン概要**](./) | [**次へ: Step 1 - S3バケット作成 →**](./01-s3-bucket)
 
 </div>
 

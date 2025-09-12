@@ -62,11 +62,12 @@ Secret Access Key: ... （配布資料を確認）
 
 2. **「IAMユーザー」** を選択
 
-![AWSコンソールログイン画面](/img/handson/placeholder-aws-console.svg)
+![AWSコンソールログイン画面](/img/handson/00-preparation/00-IAM-signin.png)
 
-:::tip 💡 画像について
-この画像は現在プレースホルダーです。実際のAWSコンソール画面に後日置き換え予定です。
-:::
+3. サインイン画面
+
+![AWSコンソールログイン画面](/img/handson/00-preparation/01-IAM-signin.png)
+
 
 ### Step 2: 認証情報の入力
 

@@ -49,17 +49,22 @@ graph LR
 
 1. **「サービス」** → **「ネットワークとコンテンツ配信」** → **「CloudFront」** を選択
 2. **「ディストリビューションを作成」** ボタンをクリック
+3. 名前を「あなたのユーザー名」に
+
 
 ---
 
 ## 🎯 Step 5-2: オリジン設定
 
-### オリジンドメインの選択
+### オリジンタイプの選択
 
-1. **「オリジンドメイン」** フィールドをクリック
-2. プルダウンメニューから以下を選択：
+1. S3 を選択
+
+### オリジン選択
+
+2. **Browse S3** ボタンを押して、自分のS3バケットを選択
    ```
-   あなたのユーザー名-images.s3.ap-northeast-1.amazonaws.com
+   2025-tohoku-it-giovanni-images
    ```
 
 :::tip 💡 オリジンとは？
@@ -69,10 +74,21 @@ graph LR
 ### オリジンパス（オプション）
 
 ```yaml
-オリジンパス: （空欄のまま）
+オリジンパス: 空欄
 ```
 
-オリジンパスを設定することで、特定のフォルダのみを配信対象にできますが、今回はバケット全体を対象とします。
+オリジンパスを設定することで、特定のフォルダのみを配信対象にできますが、今回はバケット全体とします。
+
+4. **Allow private S3 bucket access to CloudFront - Recommended** にチェック
+5. オリジン設定
+    - Use recommended origin settings
+    - Use recommended cache settings tailored to serving S3 content
+
+
+### Web Application Firewall (WAF)
+
+1. セキュリティ保護を有効にしないでください
+2. 作成まで進んでください
 
 ---
 
@@ -80,58 +96,11 @@ graph LR
 
 ### OACの作成
 
-:::warning 🔒 重要なセキュリティ設定
-OACを設定することで、CloudFrontからのみS3バケットにアクセスできるようになり、直接S3にアクセスされることを防げます。
-:::
 
-1. **「Origin access control settings (recommended)」** を選択
-2. **「コントロール設定を作成」** をクリック
-
-### OAC設定値
-
-```yaml
-名前: あなたのユーザー名-oac
-例: 2025-tohoku-it-giovanni-oac
-
-説明: OAC for handson image distribution
-サイン: Sign requests (recommended)
-オリジンタイプ: S3
-```
-
-3. **「作成」** ボタンをクリック
-4. 作成したOACが自動選択されていることを確認
 
 ---
 
-## ⚙️ Step 5-4: デフォルトキャッシュビヘイビア設定
-
-### ビューワープロトコルポリシー
-
-```yaml
-ビューワープロトコルポリシー: Redirect HTTP to HTTPS
-```
-
-HTTPリクエストを自動的にHTTPSにリダイレクトし、セキュアな通信を強制します。
-
-### 許可されたHTTPメソッド
-
-```yaml
-許可されたHTTPメソッド: GET, HEAD
-```
-
-画像配信のため、GET（ダウンロード）とHEAD（メタデータ取得）のみを許可します。
-
-### キャッシュポリシー
-
-```yaml
-キャッシュキーとオリジンリクエスト: CachingOptimized
-```
-
-画像配信に最適化されたキャッシュポリシーを使用します。
-
----
-
-## 🗺️ Step 5-5: 配信設定
+## 🗺️ Step 5-4: 配信確認
 
 ### 価格クラス
 
@@ -147,15 +116,6 @@ HTTPリクエストを自動的にHTTPSにリダイレクトし、セキュア�
 ハンズオンでは性能重視で設定しますが、実際の運用では予算に応じて選択してください。
 :::
 
-### その他の設定
-
-```yaml
-代替ドメイン名 (CNAME): （空欄）
-SSL証明書: Default CloudFront Certificate (*.cloudfront.net)
-ログ記録: オフ
-IPv6: 有効
-コメント: Handson image distribution for あなたのユーザー名
-```
 
 ---
 
@@ -183,7 +143,8 @@ graph LR
 
 ## 🔒 Step 5-7: S3バケットポリシー更新
 
-ディストリビューション作成後、S3バケットへのアクセス権限を設定する必要があります。
+ディストリビューション作成時に、以下の設定がAWS側で実施されていますが、
+うまくいってない場合、S3バケットへのアクセス権限を設定する必要があります。
 
 ### CloudFrontからのポリシー取得
 

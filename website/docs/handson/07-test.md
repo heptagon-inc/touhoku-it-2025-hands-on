@@ -47,9 +47,9 @@ graph LR
 2. **`2025-tohoku-it-sample-images`** バケットをクリック
 3. **`samples`** フォルダをクリック
 4. 以下の画像の中から1つを選んでダウンロード：
-   - `landscape_1.jpg` - 風景画像
-   - `portrait_1.jpg` - ポートレート画像
-   - `square_1.jpg` - 正方形画像
+   - `forest.jpg`
+   - `mountain.jpg`
+   - `ocean.jpg`
 
 :::tip 💡 テスト用画像について
 どの画像を選んでも問題ありません。ファイル名を覚えておいてください。
@@ -62,7 +62,10 @@ graph LR
 
 ### 自分のバケットに画像をアップロード
 
-1. **S3** → **`あなたのユーザー名-images`** バケットをクリック
+1. **S3** → **`2025-tohoku-it-あなたのユーザー名-images`** バケットをクリック
+2. **「フォルダの作成」** ボタンをクリック
+3. フォルダ名 **uploads** として作成
+4. 作成したフォルダの中に入る
 2. **「アップロード」** ボタンをクリック
 3. **「ファイルを追加」** → ダウンロードした画像を選択
 4. **「アップロード」** ボタンをクリック
@@ -83,8 +86,9 @@ Lambda関数が正常に実行されているかログを確認しましょう�
 
 ### CloudWatch Logsへ移動
 
-1. **「サービス」** → **「管理とガバナンス」** → **「CloudWatch」** を選択
-2. 左メニューから **「ログ」** → **「ロググループ」** をクリック
+1. **Lambda**を検索し、あなたの名前の入った関数を選択
+2. **モニタリング**タブをクリック
+3. **CloudWatchログを表示** ボタンをクリック
 3. **`/aws/lambda/あなたのユーザー名-image-processor`** をクリック
 4. 最新のログストリーム（一番上）をクリック
 
@@ -93,13 +97,18 @@ Lambda関数が正常に実行されているかログを確認しましょう�
 正常に動作している場合、以下のようなログが表示されます：
 
 ```
-[INFO] Processing: あなたのユーザー名-images/landscape_1.jpg
-[INFO] Original image: 1920x1080, Format: JPEG, Size: 234567 bytes
-[INFO] Created thumbnail: thumbnails/small/landscape_1_thumb.jpg (150x84)
-[INFO] Created thumbnail: thumbnails/medium/landscape_1_thumb.jpg (300x169)
-[INFO] Created thumbnail: thumbnails/large/landscape_1_thumb.jpg (600x338)
-[INFO] Metadata saved to DynamoDB: landscape_1.jpg
-[INFO] Processing completed successfully
+INIT_START Runtime Version: python:3.12.v85	Runtime Version ARN: arn:aws:lambda:ap-northeast-1::runtime:86ca4474369fee64939d2cf1cc596cb79bd2fda9dfc408b683e68b2072dde9c0
+START RequestId: 20c6c9c3-94c3-40bf-b628-82bfd4bef031 Version: $LATEST
+処理開始: 2025-tohoku-it-giovanni-images/uploads/mountain.jpg
+サムネイル生成中: small (150px)
+✓ smallサムネイル保存完了: thumbnails/mountain_small.jpg
+サムネイル生成中: medium (300px)
+✓ mediumサムネイル保存完了: thumbnails/mountain_medium.jpg
+サムネイル生成中: large (600px)
+✓ largeサムネイル保存完了: thumbnails/mountain_large.jpg
+✓ DynamoDBへの保存完了: dc925a02-06f1-49e3-9895-3c3f1797a584
+END RequestId: 20c6c9c3-94c3-40bf-b628-82bfd4bef031
+REPORT RequestId: 20c6c9c3-94c3-40bf-b628-82bfd4bef031	Duration: 2191.49 ms	Billed Duration: 2839 ms	Memory Size: 512 MB	Max Memory Used: 247 MB	Init Duration: 646.61 ms
 ```
 
 :::success 🎉 ログが正常な場合
@@ -127,12 +136,9 @@ Lambda関数が正常に動作しています！次のステップに進みま�
 
 ```
 thumbnails/
-├── small/
-│   └── landscape_1_thumb.jpg (150px幅)
-├── medium/
-│   └── landscape_1_thumb.jpg (300px幅)
-└── large/
-    └── landscape_1_thumb.jpg (600px幅)
+├── forest_large.jpg(600px幅)
+├── forest_medium.jpg(300px幅)
+└── forest_small.jpg(150px幅)
 ```
 
 各フォルダをクリックして、サムネイル画像が生成されていることを確認してください。
@@ -166,11 +172,11 @@ graph TB
 
 ```json
 {
-  "image_id": "landscape_1.jpg",
+  "image_id": "forest.jpg",
   "upload_time": "2025-01-09T10:30:00Z",
   "original_image": {
-    "width": 1920,
-    "height": 1080,
+    "width": 4096,
+    "height": 4096,
     "file_size": 234567,
     "format": "JPEG"
   },
@@ -198,7 +204,7 @@ graph TB
 新しいタブで以下のURLにアクセス：
 
 ```
-https://あなたのCloudFrontドメイン/thumbnails/medium/landscape_1_thumb.jpg
+https://あなたのCloudFrontドメイン/thumbnails/forest_medium.jpg
 ```
 
 :::success ✅ 成功！

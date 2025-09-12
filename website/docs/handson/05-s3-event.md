@@ -72,7 +72,7 @@ graph LR
 :::
 
 ```yaml
-バケット: あなたのユーザー名-images
+バケット: 2025-tohoku-it-あなたのユーザー名-images
 例: 2025-tohoku-it-giovanni-images
 ```
 
@@ -111,9 +111,9 @@ Lambda関数がサムネイルをS3に保存することで、再度Lambda関数
 2. 作成したS3トリガーが表示されていることを確認
 
 表示例：
-```
-S3: あなたのユーザー名-images
-イベント: s3:ObjectCreated:*
+```yaml
+S3: 2025-tohoku-it-あなたのユーザー名-images
+イベント: 2025-tohoku-it-s3:ObjectCreated:*
 有効: はい
 ```
 

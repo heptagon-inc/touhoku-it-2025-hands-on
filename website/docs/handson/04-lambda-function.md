@@ -46,7 +46,7 @@ description: 画像を自動処理するLambda関数を作成する
 
 ```yaml
 作成方法: 一から作成
-関数名: あなたのユーザー名-image-processor
+関数名: 2025-tohoku-itあなたのユーザー名-image-processor
 例: 2025-tohoku-it-giovanni-image-processor
 
 ランタイム: Python 3.13
@@ -61,7 +61,7 @@ Python 3.13（2024年11月リリース）とARM64アーキテクチャの組み�
 
 ```yaml
 実行ロール: 既存のロールを使用する
-既存のロール: あなたのユーザー名-lambda-role
+既存のロール: 2025-tohoku-it-あなたのユーザー名-lambda-role
 ```
 
 **「関数の作成」** をクリック
@@ -271,7 +271,7 @@ def lambda_handler(event, context):
 
 ```yaml
 キー: TABLE_NAME
-値: あなたのユーザー名-image-metadata
+値: 2025-tohoku-it-あなたのユーザー名-image-metadata
 例: 2025-tohoku-it-giovanni-image-metadata
 ```
 

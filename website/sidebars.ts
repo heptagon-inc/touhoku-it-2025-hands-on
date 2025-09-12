@@ -22,8 +22,8 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'doc',
-      id: 'handson/preparation',
-      label: '🔧 事前準備・環境確認',
+      id: 'handson/00-preparation',
+      label: 'Step 0: 事前準備・環境確認',
     },
     {
       type: 'category',
@@ -32,33 +32,38 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'handson/s3-bucket',
+          id: 'handson/01-s3-bucket',
           label: 'Step 1: S3バケット作成',
         },
         {
           type: 'doc',
-          id: 'handson/dynamodb',
+          id: 'handson/02-dynamodb',
           label: 'Step 2: DynamoDB設定',
         },
         {
           type: 'doc',
-          id: 'handson/lambda',
-          label: 'Step 3: Lambda関数作成',
+          id: 'handson/03-lambda',
+          label: 'Step 3: IAMロール作成',
         },
         {
           type: 'doc',
-          id: 'handson/s3-event',
-          label: 'Step 4: S3イベント設定',
+          id: 'handson/04-lambda-function',
+          label: 'Step 4: Lambda関数作成',
         },
         {
           type: 'doc',
-          id: 'handson/cloudfront',
-          label: 'Step 5: CloudFront設定',
+          id: 'handson/05-s3-event',
+          label: 'Step 5: S3イベント設定',
         },
         {
           type: 'doc',
-          id: 'handson/test',
-          label: 'Step 6: システムテスト',
+          id: 'handson/06-cloudfront',
+          label: 'Step 6: CloudFront設定',
+        },
+        {
+          type: 'doc',
+          id: 'handson/07-test',
+          label: 'Step 7: システムテスト',
         },
       ],
     },
@@ -69,13 +74,13 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'handson/troubleshooting',
-          label: 'Step 7: トラブルシューティング',
+          id: 'handson/08-troubleshooting',
+          label: 'Step 8: トラブルシューティング',
         },
         {
           type: 'doc',
-          id: 'handson/cleanup',
-          label: 'Step 8: 後片付け',
+          id: 'handson/09-cleanup',
+          label: 'Step 9: 後片付け',
         },
       ],
     },
@@ -87,7 +92,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'doc',
           id: 'handson/webp-extension',
-          label: 'Step 9: WebP拡張機能',
+          label: '拡張: WebP対応機能',
         },
       ],
     },

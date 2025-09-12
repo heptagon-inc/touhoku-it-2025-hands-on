@@ -89,16 +89,13 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 
 ### Step 2-1: DynamoDBサービスへ移動
 
-1. AWSコンソール上部の **「サービス」** をクリック
-2. **「データベース」** カテゴリーから **「DynamoDB」** を選択
-   
-   または、検索バーに「DynamoDB」と入力して選択
+1. 検索バーに「DynamoDB」と入力して選択
 
 ### Step 2-2: テーブル作成を開始
 
 1. DynamoDBダッシュボードで **「テーブルの作成」** ボタンをクリック
 
-![DynamoDBテーブル作成ボタン](/img/handson/placeholder-create-button.svg)
+![DynamoDBテーブル作成ボタン](/img/handson/02-dynamodb/00-Table.png)
 
 :::tip 💡 画像について
 この画像は現在プレースホルダーです。実際のAWSコンソール画面に後日置き換え予定です。
@@ -115,7 +112,7 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 **以下の設定をコピー＆ペースト：**
 
 ```yaml
-テーブル名: あなたのユーザー名-image-metadata
+テーブル名: 2025-tohoku-it-あなたのユーザー名-image-metadata
 例: 2025-tohoku-it-giovanni-image-metadata
 
 パーティションキー: image_id
@@ -123,6 +120,8 @@ description: 画像メタデータを保存するDynamoDBテーブルを作成�
 ```
 
 #### ⚙️ テーブル設定
+
+1. デフォルト設定が選択されている状態を確認
 
 | 設定項目 | 選択値 |
 |---------|--------|
@@ -191,10 +190,11 @@ GSIを追加することで、パーティションキー以外の属性でも�
 **以下の設定をコピー＆ペースト：**
 
 ```yaml
-インデックス名: upload-time-index
 パーティションキー: upload_time
 データ型: 文字列（String）
-
+インデックス名: upload-time-index(自動的に入力される)
+インデックスキャパシティー : そのまま
+ウォームスループット: そのまま
 投影される属性: すべて
 ```
 
@@ -284,7 +284,7 @@ DynamoDBテーブルの作成が完了しました。このテーブルに、Lam
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 1 - S3バケット作成**](./s3-bucket) | [**次へ: Step 3 - Lambda関数作成 →**](./lambda)
+[**← 前へ: Step 1 - S3バケット作成**](./s3-bucket) | [**次へ: Step 3 - IAMロール作成 →**](./lambda)
 
 </div>
 

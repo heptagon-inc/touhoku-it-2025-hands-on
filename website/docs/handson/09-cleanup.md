@@ -1,10 +1,10 @@
 ---
-sidebar_position: 10
-title: Step 8 - 後片付け
+sidebar_position: 11
+title: Step 9 - 後片付け
 description: 作成したAWSリソースのクリーンアップ
 ---
 
-# 🧹 Step 8: 後片付け
+# 🧹 Step 9: 後片付け
 
 ## ⏱️ このステップの所要時間
 **約5分**
@@ -296,6 +296,6 @@ AWS画像処理ハンズオンを完走しました！
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 7 - トラブルシューティング**](./troubleshooting) | [**📋 ハンズオン概要に戻る**](./)
+[**← 前へ: Step 8 - トラブルシューティング**](./08-troubleshooting) | [**📋 ハンズオン概要に戻る**](./)
 
 </div>

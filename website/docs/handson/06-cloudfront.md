@@ -1,10 +1,10 @@
 ---
-sidebar_position: 7
-title: Step 5 - CloudFront設定
+sidebar_position: 8
+title: Step 6 - CloudFront設定
 description: 画像を世界中に高速配信するCloudFront CDNを設定する
 ---
 
-# 🌐 Step 5: CloudFront設定
+# 🌐 Step 6: CloudFront設定
 
 ## ⏱️ このステップの所要時間
 **約15分**
@@ -280,7 +280,7 @@ CloudFrontの設定が完了しました。これで世界中どこからでも�
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 4 - S3イベント設定**](./s3-event) | [**次へ: Step 6 - システムテスト →**](./test)
+[**← 前へ: Step 5 - S3イベント設定**](./05-s3-event) | [**次へ: Step 7 - システムテスト →**](./07-test)
 
 </div>
 

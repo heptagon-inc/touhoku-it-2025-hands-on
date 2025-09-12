@@ -1,10 +1,10 @@
 ---
-sidebar_position: 6
-title: Step 4 - S3イベント設定
+sidebar_position: 7
+title: Step 5 - S3イベント設定
 description: S3からLambda関数を自動実行するトリガーを設定する
 ---
 
-# 🔗 Step 4: S3イベント設定
+# 🔗 Step 5: S3イベント設定
 
 ## ⏱️ このステップの所要時間
 **約10分**
@@ -188,7 +188,7 @@ S3イベント設定が完了しました。これで画像をアップロード
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 3 - Lambda関数作成**](./lambda) | [**次へ: Step 5 - CloudFront設定 →**](./cloudfront)
+[**← 前へ: Step 4 - Lambda関数作成**](./04-lambda-function) | [**次へ: Step 6 - CloudFront設定 →**](./06-cloudfront)
 
 </div>
 

@@ -1,10 +1,10 @@
 ---
-sidebar_position: 8
-title: Step 6 - システムテスト
+sidebar_position: 9
+title: Step 7 - システムテスト
 description: 完成したシステムの動作確認とテスト実行
 ---
 
-# 🧪 Step 6: システムテスト
+# 🧪 Step 7: システムテスト
 
 ## ⏱️ このステップの所要時間
 **約10分**
@@ -303,7 +303,7 @@ AWS画像処理システムが完璧に動作しています！
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 5 - CloudFront設定**](./cloudfront) | [**次へ: Step 7 - トラブルシューティング →**](./troubleshooting)
+[**← 前へ: Step 6 - CloudFront設定**](./06-cloudfront) | [**次へ: Step 8 - トラブルシューティング →**](./08-troubleshooting)
 
 </div>
 

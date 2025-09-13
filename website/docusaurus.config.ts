@@ -62,7 +62,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/ogp/20250913-tohoku-it.png',
     navbar: {
       title: '東北IT物産展2025',
       logo: {

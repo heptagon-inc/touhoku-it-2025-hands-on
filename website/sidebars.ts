@@ -69,6 +69,33 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🚀 拡張機能',
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'handson/api-gateway-extension',
+          label: 'Step 10: API Gateway拡張機能',
+        },
+        {
+          type: 'doc',
+          id: 'handson/xray-extension',
+          label: 'Step 11: X-Ray分散トレース',
+        },
+        {
+          type: 'doc',
+          id: 'handson/application-signals-extension',
+          label: 'Step 12: Application Signals',
+        },
+        {
+          type: 'doc',
+          id: 'handson/webp-extension',
+          label: 'Step 13: WebP拡張機能',
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: '🛠️ サポート',
       collapsed: true,
       items: [

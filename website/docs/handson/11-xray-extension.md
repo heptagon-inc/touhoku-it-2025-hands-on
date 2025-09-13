@@ -1,4 +1,5 @@
 ---
+id: xray-extension
 sidebar_position: 12
 title: Step 11 - X-Ray分散トレース（システム監視強化）
 description: AWS X-Rayによる分散トレースとパフォーマンス監視の導入

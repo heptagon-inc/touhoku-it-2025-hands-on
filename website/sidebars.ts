@@ -91,22 +91,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'handson/10-api-gateway-extension',
-          label: 'Step 10: API Gateway拡張',
-        },
-        {
-          type: 'doc',
-          id: 'handson/11-xray-extension',
-          label: 'Step 11: X-Ray分散トレース',
-        },
-        {
-          type: 'doc',
-          id: 'handson/12-application-signals-extension',
-          label: 'Step 12: Application Signals',
-        },
-        {
-          type: 'doc',
-          id: 'handson/13-webp-extension',
+          id: 'handson/webp-extension',
           label: 'Step 13: WebP拡張機能',
         },
       ],

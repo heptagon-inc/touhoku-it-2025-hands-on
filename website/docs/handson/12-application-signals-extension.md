@@ -1,4 +1,5 @@
 ---
+id: application-signals-extension
 sidebar_position: 13
 title: Step 12 - Application Signals（次世代監視）
 description: AWS Application Signalsによる統合アプリケーション監視とSLO管理

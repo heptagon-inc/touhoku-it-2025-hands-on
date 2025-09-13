@@ -1,4 +1,5 @@
 ---
+id: webp-extension
 sidebar_position: 14
 title: Step 13 - WebP拡張機能（上級者向け）
 description: WebP形式による画像最適化機能の実装

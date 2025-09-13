@@ -1,4 +1,5 @@
 ---
+id: api-gateway-extension
 sidebar_position: 11
 title: Step 10 - API Gateway拡張機能（画像メタデータAPI）
 description: DynamoDBの画像メタデータを取得するREST APIの構築
@@ -41,7 +42,7 @@ graph TD
     E[CloudFront] --> F[🖼️ 画像ファイル]
     
     B --> G[エンドポイント1<br/>GET /images]
-    B --> H[エンドポイント2<br/>GET /images/{id}]
+    B --> H[エンドポイント2<br/>GET /images/id]
     
     G --> I[全画像一覧取得]
     H --> J[特定画像詳細取得]
@@ -345,21 +346,21 @@ Lambda関数: 2025-tohoku-it-あなたのユーザー名-api
 
 3. **「メソッドを作成」**
 
-#### 3. /{id} リソースの作成
+#### 3. `/{id}` リソースの作成
 
 1. `/images` を選択 → **「リソースを作成」**
 2. リソース設定：
 
 ```yaml
-リソース名: {id}
-リソースパス: /{id}
+リソース名: `{id}`
+リソースパス: `/{id}`
 ```
 
 3. **「リソースを作成」**
 
 #### 4. GETメソッドの追加（特定画像詳細）
 
-1. `/{id}` リソースを選択 → **「メソッドを作成」**
+1. **/{id}** リソースを選択 → **「メソッドを作成」**
 2. メソッド設定：
 
 ```yaml
@@ -453,7 +454,7 @@ https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/images/{image_i
 }
 ```
 
-#### 特定画像詳細（/images/{id}）
+#### 特定画像詳細（`/images/{id}`）
 
 ```json
 {
@@ -664,7 +665,7 @@ DynamoDBのDecimal型がJSON serializable ではない
 
 **構築したAPI：**
 - 📡 画像一覧取得 API: `GET /images`
-- 🔍 画像詳細取得 API: `GET /images/{id}`
+- 🔍 画像詳細取得 API: GET `/images/{id}`
 - 🌐 CORS対応によるWeb連携
 - 📊 統計情報付きレスポンス
 :::
@@ -685,7 +686,7 @@ DynamoDBのDecimal型がJSON serializable ではない
 
 ---
 
-<div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
+<div style="text-align: center; margin-top: 2rem; font-size: 1.2em;">
 
 [**← 前へ: Step 9 - テスト実行**](./test) | [**次へ: Step 11 - X-Ray分散トレース →**](./11-xray-extension)
 

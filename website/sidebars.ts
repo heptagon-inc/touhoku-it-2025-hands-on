@@ -69,6 +69,23 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: '🛠️ サポート',
+      collapsed: true,
+      items: [
+        {
+          type: 'doc',
+          id: 'handson/troubleshooting',
+          label: 'Step 8: トラブルシューティング',
+        },
+        {
+          type: 'doc',
+          id: 'handson/cleanup',
+          label: 'Step 9: 後片付け',
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: '🚀 拡張機能',
       collapsed: true,
       items: [
@@ -93,24 +110,7 @@ const sidebars: SidebarsConfig = {
           label: 'Step 13: WebP拡張機能',
         },
       ],
-    },
-    {
-      type: 'category',
-      label: '🛠️ サポート',
-      collapsed: true,
-      items: [
-        {
-          type: 'doc',
-          id: 'handson/troubleshooting',
-          label: 'Step 8: トラブルシューティング',
-        },
-        {
-          type: 'doc',
-          id: 'handson/cleanup',
-          label: 'Step 9: 後片付け',
-        },
-      ],
-    },
+    }
   ],
 };
 

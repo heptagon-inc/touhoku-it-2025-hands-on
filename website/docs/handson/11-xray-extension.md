@@ -580,6 +580,6 @@ def optimized_get_images():
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 10 - API Gateway拡張機能**](./10-api-gateway-extension) | [**次へ: Step 12 - Application Signals →**](./12-application-signals-extension)
+[**← 前へ: Step 10 - API Gateway拡張機能**](./api-gateway-extension) | [**次へ: Step 12 - Application Signals →**](./application-signals-extension)
 
 </div>

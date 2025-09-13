@@ -675,6 +675,6 @@ supportsWebP().then(supported => {
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 12 - Application Signals**](./12-application-signals-extension) | [**📋 ハンズオン概要に戻る**](./)
+[**← 前へ: Step 12 - Application Signals**](./application-signals-extension) | [**📋 ハンズオン概要に戻る**](./)
 
 </div>

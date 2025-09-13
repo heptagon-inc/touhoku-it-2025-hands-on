@@ -91,7 +91,7 @@ def decimal_to_float(obj):
     if isinstance(obj, list):
         return [decimal_to_float(item) for item in obj]
     elif isinstance(obj, dict):
-        return \{key: decimal_to_float(value) for key, value in obj.items()\}
+        return {key: decimal_to_float(value) for key, value in obj.items()}
     elif isinstance(obj, Decimal):
         return float(obj)
     return obj

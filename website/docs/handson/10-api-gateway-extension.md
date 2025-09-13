@@ -91,7 +91,7 @@ def decimal_to_float(obj):
     if isinstance(obj, list):
         return [decimal_to_float(item) for item in obj]
     elif isinstance(obj, dict):
-        return {key: decimal_to_float(value) for key, value in obj.items()}
+        return \{key: decimal_to_float(value) for key, value in obj.items()\}
     elif isinstance(obj, Decimal):
         return float(obj)
     return obj
@@ -107,9 +107,9 @@ def lambda_handler(event, context):
         path_parameters = event.get('pathParameters') or {}
         query_parameters = event.get('queryStringParameters') or {}
         
-        print(f"API Request: {http_method} {path}")
-        print(f"Path Parameters: {path_parameters}")
-        print(f"Query Parameters: {query_parameters}")
+        print(f"API Request: \{http_method\} \{path\}")
+        print(f"Path Parameters: \{path_parameters\}")
+        print(f"Query Parameters: \{query_parameters\}")
         
         # ルーティング処理
         if http_method == 'GET':
@@ -136,7 +136,7 @@ def lambda_handler(event, context):
         }
         
     except Exception as e:
-        print(f"API Error: {str(e)}")
+        print(f"API Error: \{str(e)\}")
         import traceback
         traceback.print_exc()
         
@@ -210,7 +210,7 @@ def get_all_images(query_params):
         }
         
     except Exception as e:
-        print(f"get_all_images error: {str(e)}")
+        print(f"get_all_images error: \{str(e)\}")
         raise e
 
 def get_image_by_id(image_id):
@@ -220,7 +220,7 @@ def get_image_by_id(image_id):
     try:
         # DynamoDBから特定のアイテムを取得
         response = table.get_item(
-            Key={'image_id': image_id}
+            Key=\{'image_id': image_id\}
         )
         
         if 'Item' not in response:
@@ -262,12 +262,12 @@ def get_image_by_id(image_id):
             size = img.get('size', 'unknown')
             
             if fmt not in stats['formats']:
-                stats['formats'][fmt] = {'count': 0, 'total_size': 0}
+                stats['formats'][fmt] = \{'count': 0, 'total_size': 0\}
             stats['formats'][fmt]['count'] += 1
             stats['formats'][fmt]['total_size'] += img.get('file_size', 0)
             
             if size not in stats['sizes']:
-                stats['sizes'][size] = {'count': 0, 'total_size': 0}
+                stats['sizes'][size] = \{'count': 0, 'total_size': 0\}
             stats['sizes'][size]['count'] += 1
             stats['sizes'][size]['total_size'] += img.get('file_size', 0)
         
@@ -285,7 +285,7 @@ def get_image_by_id(image_id):
         }
         
     except Exception as e:
-        print(f"get_image_by_id error: {str(e)}")
+        print(f"get_image_by_id error: \{str(e)\}")
         raise e
 ```
 
@@ -409,7 +409,7 @@ Access-Control-Allow-Methods: GET,OPTIONS
 
 ```
 https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/images
-https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/images/{image_id}
+https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/images/IMAGE_ID
 ```
 
 ---
@@ -488,8 +488,8 @@ https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.com/prod/images/{image_i
   "stats": {
     "total_files": 7,
     "formats": {
-      "JPEG": {"count": 3, "total_size": 95432},
-      "WEBP": {"count": 4, "total_size": 67890}
+      "JPEG": \{"count": 3, "total_size": 95432\},
+      "WEBP": \{"count": 4, "total_size": 67890\}
     },
     "total_size": 163322
   }
@@ -509,7 +509,7 @@ const API_BASE_URL = 'https://xxxxxxxxxx.execute-api.ap-northeast-1.amazonaws.co
 // 全画像一覧を取得
 async function getAllImages(limit = 20) {
     try {
-        const response = await fetch(`${API_BASE_URL}/images?limit=${limit}`);
+        const response = await fetch(`\${API_BASE_URL}/images?limit=\${limit}`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -521,7 +521,7 @@ async function getAllImages(limit = 20) {
 // 特定画像の詳細を取得
 async function getImageById(imageId) {
     try {
-        const response = await fetch(`${API_BASE_URL}/images/${imageId}`);
+        const response = await fetch(`\${API_BASE_URL}/images/\${imageId}`);
         const data = await response.json();
         return data;
     } catch (error) {
@@ -535,9 +535,9 @@ async function displayImages() {
     const result = await getAllImages(10);
     if (result && result.images) {
         result.images.forEach(image => {
-            console.log(`画像ID: ${image.image_id}`);
-            console.log(`アップロード日時: ${image.upload_time}`);
-            console.log(`利用可能形式: ${image.formats_available.join(', ')}`);
+            console.log(`画像ID: \${image.image_id}`);
+            console.log(`アップロード日時: \${image.upload_time}`);
+            console.log(`利用可能形式: \${image.formats_available.join(', ')}`);
         });
     }
 }
@@ -553,12 +553,12 @@ async function createImageGallery(containerId) {
             if (detail) {
                 // CloudFront URLを構築
                 const cloudFrontUrl = 'https://your-cloudfront-domain.cloudfront.net';
-                const thumbnailUrl = `${cloudFrontUrl}/thumbnails/${detail.original_image.key.replace('uploads/', '')}_medium.jpg`;
+                const thumbnailUrl = `\${cloudFrontUrl}/thumbnails/\${detail.original_image.key.replace('uploads/', '')}_medium.jpg`;
                 
                 // 画像要素を作成
                 const imgElement = document.createElement('img');
                 imgElement.src = thumbnailUrl;
-                imgElement.alt = `Image ${image.image_id}`;
+                imgElement.alt = `Image \${image.image_id}`;
                 imgElement.style.maxWidth = '200px';
                 imgElement.style.margin = '10px';
                 

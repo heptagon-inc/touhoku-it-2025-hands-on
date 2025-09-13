@@ -84,18 +84,6 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-    {
-      type: 'category',
-      label: '🚀 拡張機能',
-      collapsed: true,
-      items: [
-        {
-          type: 'doc',
-          id: 'handson/webp-extension',
-          label: 'Step 13: WebP拡張機能',
-        },
-      ],
-    },
   ],
 };
 

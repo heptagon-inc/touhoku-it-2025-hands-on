@@ -46,7 +46,7 @@ description: 画像を自動処理するLambda関数を作成する
 
 ```yaml
 作成方法: 一から作成
-関数名: 2025-tohoku-itあなたのユーザー名-image-processor
+関数名: 2025-tohoku-it-あなたのユーザー名-image-processor
 例: 2025-tohoku-it-giovanni-image-processor
 
 ランタイム: Python 3.12

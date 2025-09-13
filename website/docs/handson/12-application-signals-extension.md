@@ -471,7 +471,7 @@ Application Signalsで追跡すべきKPI：
 
 <div style={{textAlign: 'center', marginTop: '2rem', fontSize: '1.2em'}}>
 
-[**← 前へ: Step 11 - X-Ray分散トレース**](./11-xray-extension) | [**次へ: Step 13 - WebP拡張機能 →**](./13-webp-extension)
+[**← 前へ: Step 11 - X-Ray分散トレース**](./xray-extension) | [**次へ: Step 13 - WebP拡張機能 →**](./webp-extension)
 
 </div>
 

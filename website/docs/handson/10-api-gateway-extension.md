@@ -107,9 +107,9 @@ def lambda_handler(event, context):
         path_parameters = event.get('pathParameters') or {}
         query_parameters = event.get('queryStringParameters') or {}
         
-        print(f"API Request: \{http_method\} \{path\}")
-        print(f"Path Parameters: \{path_parameters\}")
-        print(f"Query Parameters: \{query_parameters\}")
+        print(f"API Request: {http_method} {path}")
+        print(f"Path Parameters: {path_parameters}")
+        print(f"Query Parameters: {query_parameters}")
         
         # ルーティング処理
         if http_method == 'GET':
@@ -136,7 +136,7 @@ def lambda_handler(event, context):
         }
         
     except Exception as e:
-        print(f"API Error: \{str(e)\}")
+        print(f"API Error: {str(e)}")
         import traceback
         traceback.print_exc()
         
@@ -210,7 +210,7 @@ def get_all_images(query_params):
         }
         
     except Exception as e:
-        print(f"get_all_images error: \{str(e)\}")
+        print(f"get_all_images error: {str(e)}")
         raise e
 
 def get_image_by_id(image_id):
@@ -220,7 +220,7 @@ def get_image_by_id(image_id):
     try:
         # DynamoDBから特定のアイテムを取得
         response = table.get_item(
-            Key=\{'image_id': image_id\}
+            Key={'image_id': image_id}
         )
         
         if 'Item' not in response:
@@ -285,7 +285,7 @@ def get_image_by_id(image_id):
         }
         
     except Exception as e:
-        print(f"get_image_by_id error: \{str(e)\}")
+        print(f"get_image_by_id error: {str(e)}")
         raise e
 ```
 
